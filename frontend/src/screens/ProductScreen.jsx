@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
-import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
+import { Row, Col, Image, ListGroup, Card, Button, ListGroupItem } from 'react-bootstrap'
 import Rating from "../components/Rating"
 import products from "../products"
 
@@ -26,10 +26,39 @@ const ProductScreen = () => {
                     <Rating value={product.rating} text={`${product.numReviews}`}/>
                 </ListGroup.Item>
                 <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+                <ListGroup.Item>Price: ${product.description}</ListGroup.Item>
             </ListGroup>
         </Col>
         <Col md={3}>
-            
+            <Card>
+                <ListGroup variant="flush">
+                    <ListGroup.Item>
+                        <Row>
+                            <Col>Price:</Col>
+                            <Col>
+                                <strong>${product.price}</strong>
+                            </Col>
+                        </Row>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                        <Row>
+                            <Col>Status:</Col>
+                            <Col>
+                                <strong>{product.countInStock > 0 ? 'In Stock': 'Out Of Stock'}</strong>
+                            </Col>
+                        </Row>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                        <Button
+                           className="btn-block"
+                           type="button"
+                           disabled={product.countInStock === 0} 
+                            >
+                            Add To Cart
+                        </Button>
+                    </ListGroup.Item>
+                </ListGroup>
+            </Card>
         </Col>
       </Row>
     </>
