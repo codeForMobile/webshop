@@ -42,22 +42,22 @@ const productSchema = new mongoose.Schema({
     },
     reviews: [reviewSchema], 
     rating: {
-        type: number, 
+        type: Number, 
         required: true,
         default:0
     },
     numReviews: {
-        type: number, 
+        type: Number, 
         required: true,
         default:0
     },
     price: {
-        type: number, 
+        type: Number, 
         required: true,
         default: 0
     },
     countInStock: {
-        type: number, 
+        type: Number, 
         required: true,
         default: 0
     }
