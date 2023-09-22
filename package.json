@@ -1,0 +1,26 @@
+{
+  "name": "webshop",
+  "version": "1.0.0",
+  "description": "webshop",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeForMobile/webshop.git"
+  },
+  "keywords": [
+    "webshop"
+  ],
+  "author": "code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeForMobile/webshop/issues"
+  },
+  "homepage": "https://github.com/codeForMobile/webshop#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
