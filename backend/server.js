@@ -4,7 +4,7 @@ dotenv.config()
 import connectDB from './config/db.js'
 import productRoutes from './routes/productRoutes.js'
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 6000
 
 // DB connection
 connectDB()
@@ -13,4 +13,4 @@ const app = express()
 
 app.get('/', (req,res) => res.send('api is running...'))
 app.use('/api/products', productRoutes)
-app.listen(port, () => console.log(`Server running on port ${port}`)) 
+app.listen(port, () => console.log(`Server running on port ${port}`))
