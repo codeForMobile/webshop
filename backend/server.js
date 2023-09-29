@@ -14,6 +14,10 @@ connectDB()
 
 const app = express()
 
+// body parser
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
 app.get('/', (req,res) => res.send('api is running...'))
 
 app.use('/api/products', productRoutes)
