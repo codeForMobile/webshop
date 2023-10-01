@@ -20,7 +20,7 @@ const PaymentScreen = () => {
     }
   }, [ShippingAddress, navigate])
 
-  const submitHandler = (e) =>{
+  const submitHandler = (e) => {
     e.preventDefault()
     dispatch(savePaymentMethod(paymentMethod))
     navigate('/placeorder')
@@ -44,11 +44,11 @@ const PaymentScreen = () => {
                     name="paymentMethod"
                     value='PayPal'
                     checked
-                    onChange={(e) => setPaymentMethod(e.target)}
-                    />
+                    onChange={(e) => setPaymentMethod(e.target.value)}
+                    ></Form.Check>
                 </Col>
             </Form.Group>
-            <Button type="submit" variant="primary" style={{marginTop: '5px'}}>
+            <Button type="submit" variant="primary">
                 Continue
             </Button>
         </Form>
