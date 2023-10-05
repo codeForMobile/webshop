@@ -9,7 +9,7 @@ import orderRoutes from './routes/orderRoutes.js'
 
 import { NotFound, errorHandler } from './middleware/errorHandler.js'
 
-const port = process.env.PORT || 6000
+const port = process.env.PORT || 6060
 
 // DB connection
 connectDB()
