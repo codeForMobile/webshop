@@ -9,9 +9,3 @@ export const signInText = 'Sign In'
 export const shippingText = 'Shipping'
 export const paymentText = 'Payment'
 export const placeorderText = 'Place Order'
-
-// Individual routes
-export const loginRoute = '/login'
-export const shippingRoute = '/shipping'
-export const paymentRoute = '/payment'
-export const placeorderRoute = '/placeorder'

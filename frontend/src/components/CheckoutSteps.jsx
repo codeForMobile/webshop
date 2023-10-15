@@ -8,7 +8,7 @@ const CheckoutSteps = ({step1, step2, step3, step4}) => {
         <Nav.Item>
             {
                 step1? (
-                    <LinkContainer to={texts.loginRoute}>
+                    <LinkContainer to='/login'>
                         <Nav.Link>{texts.signInText}</Nav.Link>
                     </LinkContainer>
                 ) : (
@@ -19,7 +19,7 @@ const CheckoutSteps = ({step1, step2, step3, step4}) => {
         <Nav.Item>
             {
                 step2? (
-                    <LinkContainer to={texts.shippingRoute}>
+                    <LinkContainer to='/shipping'>
                         <Nav.Link>{texts.shippingText}</Nav.Link>
                     </LinkContainer>
                 ) : (
@@ -30,7 +30,7 @@ const CheckoutSteps = ({step1, step2, step3, step4}) => {
         <Nav.Item>
             {
                 step3? (
-                    <LinkContainer to={texts.paymentRoute}>
+                    <LinkContainer to='/payment'>
                         <Nav.Link>{texts.paymentText}</Nav.Link>
                     </LinkContainer>
                 ) : (
@@ -41,7 +41,7 @@ const CheckoutSteps = ({step1, step2, step3, step4}) => {
         <Nav.Item>
             {
                 step4? (
-                    <LinkContainer to={texts.placeorderRoute}>
+                    <LinkContainer to='/placeorder'>
                         <Nav.Link>{texts.placeorderText}</Nav.Link>
                     </LinkContainer>
                 ) : (
