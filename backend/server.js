@@ -1,8 +1,6 @@
 import path from 'path'
 import express from 'express'
-import dotenv from 'dotenv'
 import cookieParser from 'cookie-parser'
-dotenv.config()
 import connectDB from './config/db.js'
 import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
@@ -31,7 +29,7 @@ app.get('/api/config/paypal', (req,res ) => res.send({
     clientId: process.env.PAYPAL_CLIENT_ID
 }))
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV !== 'development') {
     const __dirname = path.resolve();
     app.use(express.static(path.join(__dirname, '/frontend/build')));
     app.get('*', (req, res) =>
