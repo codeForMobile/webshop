@@ -8,7 +8,7 @@
 - Multi step checkout with a feature to return back to previous step.
 - Admin and Profile sections are wip.
 
-### This is how it will look like
+#### This is how it will look like
 
 <img
   src="./webshop.jpg"
