@@ -14,7 +14,3 @@
   src="./webshop.jpg"
   alt="contacts-manager-webpack"
   style="margin: 0 auto; border-radius:10px"/>
-
-#### App is live at render
-
-<a href='https://webshop-wir3.onrender.com/login'>webshop</a>
