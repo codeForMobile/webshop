@@ -11,6 +11,20 @@
 
 - Admin and Profile sections.
 
+### Generic
+
+DB is hosted on remote mongo db cluster but it can be configured locally to run whole setup local.
+
+### Scripts (How to's)
+
+- Mostly if you are starting afresh, db will already loose the seed data and hence no product will be
+  avaialble on ui or via api's. To fix this, run `npm run data:import` after providing/updating correct db
+  string in .env file(s), if needed.
+
+  Once data is imported then usual script to run both frontend and backend together will be
+  `npm run dev`. If no errors in console, you are good and will see landing view of the ui on frontend
+  port `3000` with images of different products.
+
 #### This is how it will look like
 
 <img
