@@ -1,5 +1,4 @@
-import mongoose from "mongoose"
-//import dotenv from 'dotenv'
+import dotenv from 'dotenv'
 import colors from 'colors'
 import users from './data/users.js'
 import products from './data/products.js'
@@ -8,7 +7,7 @@ import Order from './models/orderSchema.js'
 import connectDB from "./config/db.js"
 import User from "./models/userModel.js"
 
-//dotenv.config()
+dotenv.config()
 
 connectDB()
 
