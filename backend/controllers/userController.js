@@ -24,7 +24,7 @@ const authUser = asyncHandler(async (req,res) =>{
 })
 
 //  @desc    Register user
-//  @route   POST /api/users/login
+//  @route   POST /api/users
 //  @access  Public
 const registerUser = asyncHandler(async (req,res) =>{
     const { name, email, password } = req.body
@@ -125,7 +125,7 @@ const getUserByID = asyncHandler(async (req,res) =>{
 //  @access  Private/Admin
 const deleteUser = asyncHandler(async (req,res) =>{
     
-    res.send('delete users')
+    res.send('delete user')
 })
 
 //  @desc    Update users
