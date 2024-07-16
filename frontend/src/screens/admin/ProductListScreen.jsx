@@ -42,7 +42,7 @@ const ProductListScreen = () => {
 
         { isLoading ? <Loader/> : error ? (<Message variant='danger'>{error}</Message>): (
             <>
-            <Table striped hover responsive className='table-sm'>
+            <Table striped hover bordered responsive className='table-sm'>
                 <thead>
                     <tr>
                         <td>Id</td>
@@ -50,8 +50,8 @@ const ProductListScreen = () => {
                         <td>Price</td>
                         <td>Category</td>
                         <td>Brand</td>
-                        <td></td>
-                        <td></td>
+                        <td>Update</td>
+                        <td>Delete</td>
                     </tr>
                 </thead>
                 <tbody>
