@@ -1,19 +1,31 @@
 import { LinkContainer } from 'react-router-bootstrap'
 import { Table, Button } from 'react-bootstrap'
 import { FaTimes, FaTrash, FaEdit, FaCheck } from 'react-icons/fa'
+import { toast } from 'react-toastify'
 import Message from '../../components/Message'
 import Loader from '../../components/Loader'
-import { useGetUserQuery } from '../../slices/usersApiSlice'
+import { useGetUserQuery, useDelteUserMutation } from '../../slices/usersApiSlice'
 
 const UserListScreen = () => {
   const { data: users, isLoading, error, refetch } = useGetUserQuery()
+  const [deleteUser, { isLoading: loadingDelete }] = useDelteUserMutation()
 
   const deleteHandler = async (id) => {
-    console.log('delete')
+    if(window.confirm('Are you sure?')){
+        try {
+            await deleteUser(id)
+            toast.success('User deleted')
+            refetch()
+        } catch (err) {
+            toast.error(err?.data?.message || err?.error)
+        }
+    }
   }
+
   return (
     <>
       <h1>Users</h1>
+      {loadingDelete && <Loader/>}
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -47,7 +59,7 @@ const UserListScreen = () => {
                       <FaEdit/>
                     </Button>
                   </LinkContainer>
-                  <Button variant='danger' className='btn-sm'  onClick={(user) => deleteHandler(user._id)}>
+                  <Button variant='danger' className='btn-sm'  onClick={() => deleteHandler(user._id)}>
                     <FaTrash style={{ color: 'white'}}/>
                   </Button>
                 </td>
