@@ -6,6 +6,7 @@ import { useGetProductsQuery } from '../slices/productsApiSlice.js'
 import Loader from '../components/Loader.jsx'
 import Message from '../components/Message.jsx'
 import ProductCarousel from '../components/ProductCarousel.jsx'
+import Meta from '../components/Meta.jsx'
 
 const HomeScreen = () => {
   const { pageNumber: myPageNumber, keyword } = useParams()
@@ -20,6 +21,7 @@ const HomeScreen = () => {
       <Message variant='danger'>{error?.data?.message || error.error }</Message>
     ) : (    
     <>
+      <Meta title='Hello'/>
       <h1>Latest Products</h1>
       <Row>
         {data.products.map((product) =>(
