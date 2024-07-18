@@ -7,9 +7,11 @@
 - Paypal integration works.
 - Multi step checkout with feature to return back to previous step.
 
-### WIP
+### users
 
-- Admin and Profile sections.
+admin: admin@email.com pwd: 123456
+Jhon Doe: jdoe@email.com  pwd: 123456
+and others.
 
 ### Generic
 
@@ -25,9 +27,46 @@ DB is hosted on remote mongo db cluster but it can be configured locally to run 
   `npm run dev`. If no errors in console, you are good and will see landing view of the ui on frontend
   port `3000` with images of different products.
 
-#### This is how it will look like
+### UI
+
+#### Product added to cart
 
 <img
   src="./webshop.jpg"
   alt="contacts-manager-webpack"
+  style="margin: 0 auto; border-radius:10px"/>
+
+#### Landing page with carousel
+
+<img
+  src="./carousel.jpg"
+  alt="carousel"
+  style="margin: 0 auto; border-radius:10px"/>
+
+#### Paypal checkout page
+
+<img
+  src="./paypal-checkout.jpg"
+  alt="paypal"
+  style="margin: 0 auto; border-radius:10px"/>
+
+#### Admin profile page
+
+<img
+  src="./admin-profile.jpg"
+  alt="admin profile"
+  style="margin: 0 auto; border-radius:10px"/>
+
+#### Admin product administration page
+
+<img
+  src="./admin-products.jpg"
+  alt="admin product administration"
+  style="margin: 0 auto; border-radius:10px"/>
+
+#### Ratings and Reviews
+
+<img
+  src="./Ratings-Reviews.jpg"
+  alt="Ratings and Reviews"
   style="margin: 0 auto; border-radius:10px"/>
