@@ -7,8 +7,8 @@ import Loader from '../components/Loader.jsx'
 import Message from '../components/Message.jsx'
 
 const HomeScreen = () => {
-  const { pageNumber: myPageNumber } = useParams()
-  const { data, isLoading, error } = useGetProductsQuery({myPageNumber})
+  const { pageNumber: myPageNumber, keyword } = useParams()
+  const { data, isLoading, error } = useGetProductsQuery({keyword, myPageNumber})
 
   return (
     <>{ isLoading? (
@@ -30,6 +30,7 @@ const HomeScreen = () => {
       <Paginate
         pages={data.pages}
         page={data.page}
+        keyword={keyword ? keyword : ''}
       />
     </>
     )}

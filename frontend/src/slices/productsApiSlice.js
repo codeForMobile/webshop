@@ -5,9 +5,10 @@ import { UPLOAD_URL} from '../const'
 export const productsApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         getProducts: builder.query({
-            query: ({myPageNumber}) => ({
+            query: ({keyword, myPageNumber}) => ({
                 url: Product_URL,
                 params: {
+                    keyword,
                     myPageNumber
                 }
             }),
