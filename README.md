@@ -1,5 +1,7 @@
 ### Webshop
 
+App is deployed at `https://webshop-wir3.onrender.com`
+
 - React based online shopping app.
 - Nodejs as backend with mongo cloud db as persistence.
 - jwt cookie for auth and CRA build for frontend.
